@@ -8,18 +8,19 @@ Generate a font by converting from characters written on a special form.
 ## 説明
 http://nixeneko.hatenablog.com/entry/2016/02/06/114348
 
-## Requirements
-- Python (version >= 3.4)
-- Fontforge
-- Potrace
-- ZBar
-- Cairo
-- NumPy
-- OpenCV-Python (version 3)
-- CairoSVG
-- PyPDF2
-- python-qrcode
+## Getting Started
 
+```bash
+docker compose up -d
+docker compose exec handfontgen /bin/bash
+
+# execute below on a shell in the container...
+source ./venv/bin/activate
+
+python handfontgen/formgen.py -o ./output/zenkaku.pdf ...  # generate a form
+
+python handfontgen/fontgen.py font.otf ./input/scanned_forms/ # generate a font from scanned forms
+```
 
 ## Licence
 
