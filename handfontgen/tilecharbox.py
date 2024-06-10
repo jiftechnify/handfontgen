@@ -231,7 +231,7 @@ class TemplateTiler:
                     if isinstance(c, str):
                         texttag = ElementTree.Element("text")
                         texttag.text = c
-                        texttag.set("style", "font-size:10pt;")
+                        texttag.set("style", "font-size:10pt;font-family:'Noto Sans CJK JP';")
                         texttag.set("x", str(posx + self.textpos[0]))
                         texttag.set("y", str(posy + self.textpos[1]))
                         xmlroot.append(texttag)
@@ -294,12 +294,12 @@ class TemplateTiler:
 
     def outputpapertemplate(self, dest, listchar, output=None):
         if output == None:
-            output = PyPDF2.PdfFileWriter()
+            output = PyPDF2.PdfWriter()
 
         while listchar:
             iopage = self.outputtemplateonepage(listchar)
-            page = PyPDF2.PdfFileReader(iopage)
-            output.addPage(page.getPage(0))
+            reader = PyPDF2.PdfReader(iopage)
+            output.add_page(reader.pages[0])
             
         if dest != None:
             if isinstance(dest, str): # when dest is a file path

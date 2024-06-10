@@ -1,0 +1,6 @@
+opencv-python-headless
+PyPDF2
+qrcode
+pypdf
+CairoSVG
+numpy

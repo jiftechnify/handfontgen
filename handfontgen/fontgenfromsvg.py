@@ -138,12 +138,12 @@ def generateffscript(dest, metadata, lstglf, codepoints):
     
     script += '# set font info\n'
     # SetFontNames(fontname[,family[,fullname[,weight[,copyright-notice[,fontversion]]]]])
-    script += 'SetFontNames("{fontname}",\\\n'.format(fontname=metadata.fontname)
-    script += '             "{family}",\\\n'.format(family=metadata.family)
-    script += '             "{fullname}",\\\n'.format(fullname=metadata.fullname)
-    script += '             "{weight}",\\\n'.format(weight=metadata.weight)
-    script += '             "{copyright}",\\\n'.format(copyright=metadata.copyrightnotice)
-    script += '             "{fontversion}");\n\n'.format(fontversion=metadata.fontversion)
+    script += 'SetFontNames("{fontname}",'.format(fontname=metadata.fontname)
+    script += '"{family}",'.format(family=metadata.family)
+    script += '"{fullname}",'.format(fullname=metadata.fullname)
+    script += '"{weight}",'.format(weight=metadata.weight)
+    script += '"{copyright}",'.format(copyright=metadata.copyrightnotice)
+    script += '"{fontversion}");\n\n'.format(fontversion=metadata.fontversion)
 
     # SetTTFName(lang,nameid,utf8-string)
     # see https://www.microsoft.com/typography/otspec/name.htm

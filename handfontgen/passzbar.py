@@ -22,7 +22,7 @@ def passzbar(image):
     
     args = [
         ZBARIMG,
-        ':-', '-q'
+        '-q', '--nodbus', '/dev/stdin'
     ] + optionargs
     
     p = subprocess.Popen(

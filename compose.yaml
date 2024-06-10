@@ -1,0 +1,9 @@
+services:
+  handfontgen:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: handfontgen
+    volumes:
+      - ./input:/work/input:ro
+      - ./output:/work/output:rw

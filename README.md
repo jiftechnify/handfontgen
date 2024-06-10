@@ -27,5 +27,4 @@ MIT License (Copyright 2016 nixeneko)
 
 ## Author
 
-[nixeneko](https://github.com/nixeneko)
-
+[nixeneko](https://github.com/nixeneko), patched by jiftechnify
