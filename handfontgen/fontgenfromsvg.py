@@ -261,4 +261,3 @@ if __name__ == '__main__':
             )
     
     generatefont(args.dest, metadata, args.srcdir)
-    
